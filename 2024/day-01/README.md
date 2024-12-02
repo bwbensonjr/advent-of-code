@@ -1,4 +1,6 @@
-# Advent of Code - 2024 Day 1
+# Advent of Code - Day 1 - 2024
+
+See puzzle: [https://adventofcode.com/2024/day/1](https://adventofcode.com/2024/day/1)
 
 * [`Makefile`](Makefile) - Run scripts in practice and full mode.
 * [`data-input.txt`](data-input.txt) - Full data set.
