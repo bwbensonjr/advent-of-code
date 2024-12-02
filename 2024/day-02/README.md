@@ -22,7 +22,7 @@ idioms that I learned in SICP is the use of recursion and induction as
 a natural way to structure data and the algorithms that process that
 data. The key to mathematical induction is to define a base case and a
 then a transition between a larger case and smaller case, moving
-towards the base case.
+from or towards the base case.
 
 An example of an inductive/recursive function from the Day 2 challange
 is the calculation of the difference between pairs of adjacent numbers
@@ -35,8 +35,10 @@ from a number sequence.
 (define (pairwise-differences num-list)
   (if (or (null? num-list)          ; Even-number case
           (null? (rest num-list)))  ; Odd-number case
-      ;; No more number pairs
+      ;; Base case: no more number pairs
       '()
+      ;; Inductive case: add the difference to the result
+      ;; of the calculation on a list without first element.
       (cons (- (first num-list) (second num-list))
             (pairwise-differences (rest num-list)))))
 ```
@@ -87,9 +89,9 @@ out one of the elements.
 ```
 
 This function uses an internally defined function that maintains three
-pieces of the calculation as parameters: `rep-head` - the first part
-or head of the alternative list, `leave-out` - the element to leave
-out, and `rep-tail` - the tail of the alternative list.
+pieces of the calculation as parameters: `rep-head` - the part of the
+list before the elided element, `leave-out` - the element to leave
+out, and `rep-tail` - the part of the list after the left out element.
 
 ```
 > (generate-alternatives '(1 3 2 4 5))

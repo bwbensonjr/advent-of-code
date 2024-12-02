@@ -17,8 +17,10 @@
 (define (pairwise-differences num-list)
   (if (or (null? num-list)          ; Even-number case
           (null? (rest num-list)))  ; Odd-number case
-      ;; No more number pairs
+      ;; Base case: no more number pairs
       '()
+      ;; Inductive case: add the difference to the result
+      ;; of the calculation on a list without first element.
       (cons (- (first num-list) (second num-list))
             (pairwise-differences (rest num-list)))))
 
