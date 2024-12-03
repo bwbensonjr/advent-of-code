@@ -79,9 +79,9 @@ out one of the elements.
 ;;
 (define (generate-alternatives report)
   (define (alternatives rep-head leave-out rep-tail)
-    (if (null? rep-tail)
-        (list rep-head)
-        (cons (append rep-head rep-tail)
+    (if (null? rep-tail) ; No more elements to leave out
+        (list rep-head)  ; Return elements before `leave-out`
+        (cons (append rep-head rep-tail) ; Head and tail without middle
               (alternatives (append rep-head (list leave-out))
                             (first rep-tail)
                             (rest rep-tail)))))
