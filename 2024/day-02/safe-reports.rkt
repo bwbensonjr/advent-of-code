@@ -47,11 +47,3 @@
 
 (printf "~a\n" number-of-safe-reports)
 
-
-
-
-
-
-
-
-
