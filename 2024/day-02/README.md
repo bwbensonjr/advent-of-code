@@ -2,12 +2,6 @@
 
 See puzzle: [https://adventofcode.com/2024/day/2](https://adventofcode.com/2024/day/2)
 
-* [`Makefile`](Makefile) - Run scripts in practice and full mode.
-* [`data-input.txt`](data-input.txt) - Full data set.
-* [`data-practice.txt`](data-practice.txt) - Practice data set.
-* [`safe-reports.rkt`](safe-reports.rkt) - Solution to first part of challenge.
-* [`safe-reports-2.rkt`](safe-reports-2.rkt) - Solution to second part of challenge.
-
 For the second puzzle I started using the
 [Racket](https://www.racket-lang.org/) dialect of the
 [Scheme](https://en.wikipedia.org/wiki/Scheme_(programming_language))
