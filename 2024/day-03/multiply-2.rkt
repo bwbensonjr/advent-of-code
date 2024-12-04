@@ -8,7 +8,7 @@
   (with-input-from-file file-name
     (lambda ()
       (for/list ([line (in-lines)])
-                line))))
+        line))))
 
 ;; Parse a string for valide `mul`, `dont't`,
 ;; and `do` operations and return them as a
